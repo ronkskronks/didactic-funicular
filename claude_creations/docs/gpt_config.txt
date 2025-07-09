@@ -1,0 +1,25 @@
+# Enhanced Trainable GPT Configuration
+# Tweak these values to experiment with different architectures!
+
+# Model Architecture
+max_vocab = 150        # Maximum vocabulary size
+context_len = 12       # Context window (how many tokens to remember)
+d_model = 24          # Embedding dimension (bigger = more capacity)
+n_heads = 3           # Number of attention heads
+n_layers = 2          # Number of transformer layers  
+d_ff = 48             # Feed-forward hidden dimension
+
+# Training Parameters
+learning_rate = 0.008  # How fast the model learns (lower = more stable)
+epochs = 150           # Number of training passes through data
+
+# Generation Parameters  
+temperature = 0.8     # Randomness in generation (0 = deterministic, 2 = very random)
+generate_count = 15   # How many tokens to generate by default
+
+# Experiment Configs (uncomment to try):
+# Small model for fast experimentation:
+# max_vocab = 50, context_len = 6, d_model = 12, epochs = 5
+
+# Larger model for better quality:
+max_vocab = 300, context_len = 16, d_model = 32, d_ff = 64, epochs = 25
